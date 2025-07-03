@@ -34,7 +34,7 @@ const Hero = () => {
             From concept to app store publication, we deliver exceptional digital experiences.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               size="lg" 
               onClick={scrollToContact}
@@ -51,21 +51,6 @@ const Hero = () => {
             >
               View Our Work
             </Button>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
-            <div className="text-center">
-              <div className="text-3xl font-bold text-blue-600 mb-2">3+</div>
-              <div className="text-gray-600">Apps in Development</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-purple-600 mb-2">2024</div>
-              <div className="text-gray-600">Founded</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl font-bold text-green-600 mb-2">Kerala</div>
-              <div className="text-gray-600">Based in India</div>
-            </div>
           </div>
         </div>
       </div>
