@@ -32,20 +32,20 @@ const Contact = () => {
     {
       icon: <Mail className="w-6 h-6 text-blue-600" />,
       title: "Email",
-      details: "hello@devstudio.com",
+      details: "appweaverlabs@gmail.com",
       description: "Send us an email anytime"
     },
     {
       icon: <Phone className="w-6 h-6 text-green-600" />,
       title: "Phone",
-      details: "+1 (555) 123-4567",
+      details: "+91 7034714132",
       description: "Mon-Fri from 9am to 6pm"
     },
     {
       icon: <MapPin className="w-6 h-6 text-red-600" />,
       title: "Office",
-      details: "123 Innovation Drive",
-      description: "Tech City, TC 12345"
+      details: "Shantipuram 90, NGO Quarters",
+      description: "Kakkanad, Ernakulam, Kerala 682021"
     },
     {
       icon: <Clock className="w-6 h-6 text-purple-600" />,

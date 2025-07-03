@@ -13,7 +13,7 @@ const Footer = () => {
                 <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
                   <Smartphone className="w-6 h-6 text-white" />
                 </div>
-                <span className="text-2xl font-bold">DevStudio</span>
+                <span className="text-2xl font-bold">AppWeavers</span>
               </div>
               <p className="text-gray-400 mb-6 leading-relaxed max-w-md">
                 Professional mobile app development studio specializing in creating innovative, 
@@ -22,15 +22,15 @@ const Footer = () => {
               <div className="space-y-3">
                 <div className="flex items-center space-x-3 text-gray-400">
                   <Mail className="w-5 h-5" />
-                  <span>hello@devstudio.com</span>
+                  <span>appweaverlabs@gmail.com</span>
                 </div>
                 <div className="flex items-center space-x-3 text-gray-400">
                   <Phone className="w-5 h-5" />
-                  <span>+1 (555) 123-4567</span>
+                  <span>+91 7034714132</span>
                 </div>
                 <div className="flex items-center space-x-3 text-gray-400">
                   <MapPin className="w-5 h-5" />
-                  <span>123 Innovation Drive, Tech City, TC 12345</span>
+                  <span>Shantipuram 90, NGO Quarters, Kakkanad, Ernakulam, Kerala 682021</span>
                 </div>
               </div>
             </div>
@@ -61,7 +61,7 @@ const Footer = () => {
           <div className="border-t border-gray-800 pt-8">
             <div className="flex flex-col md:flex-row justify-between items-center">
               <p className="text-gray-400 text-sm mb-4 md:mb-0">
-                © 2024 DevStudio. All rights reserved. Professional Mobile App Development Services.
+                © 2024 AppWeavers. All rights reserved. Professional Mobile App Development Services.
               </p>
               <div className="flex space-x-6 text-sm text-gray-400">
                 <span>Registered Business Entity</span>

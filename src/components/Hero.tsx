@@ -18,19 +18,19 @@ const Hero = () => {
           <div className="flex justify-center mb-6">
             <div className="flex items-center space-x-1 bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">
               <Star className="w-4 h-4 fill-current" />
-              <span>Professional App Development Studio</span>
+              <span>AppWeavers - Professional App Development Studio</span>
             </div>
           </div>
           
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Building Amazing
+            Weaving Amazing
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent block">
               Mobile Apps
             </span>
           </h1>
           
           <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-            We specialize in creating high-quality mobile applications for Android and iOS platforms. 
+            AppWeavers specializes in creating high-quality mobile applications for Android and iOS platforms. 
             From concept to app store publication, we deliver exceptional digital experiences.
           </p>
           
