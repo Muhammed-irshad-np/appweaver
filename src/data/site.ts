@@ -52,14 +52,24 @@ export const flagship = {
   facts: ['Built on Meta’s official Graph API', 'Razorpay checkout: UPI, cards, netbanking', 'Free lifetime access for the first 50 creators'],
 };
 
+export const upnow = {
+  name: 'UpNow',
+  fullName: 'UpNow: Smart Alarm & Habits',
+  url: 'https://play.google.com/store/apps/details?id=com.appweavers.upnow',
+  icon: '/upnow-icon.png',
+  kind: 'AI task-based smart alarm',
+  headline: 'An alarm you can’t snooze your way out of.',
+  description:
+    'UpNow is a task-based smart alarm that uses AI to make sure you’re actually awake: dismissing it means completing a wake-up challenge. It pairs alarms with a habit tracker and routine builder so the morning turns into a plan for the day.',
+  features: [
+    'AI-powered, task-based wake-up challenges',
+    'Habit tracker with progress charts',
+    'Morning and evening routine builder',
+    'Privacy-first: data stays on your device, no account, no ads',
+  ],
+};
+
 export const labProducts: Product[] = [
-  {
-    name: 'UpNow',
-    kind: 'AI smart alarm',
-    description: 'A wake-up assistant that learns your sleep rhythm and builds an adaptive morning routine around it.',
-    ai: ['On-device sleep modelling', 'Adaptive routines'],
-    status: 'In the lab',
-  },
   {
     name: 'Kegel',
     kind: 'AI pelvic-floor coach',

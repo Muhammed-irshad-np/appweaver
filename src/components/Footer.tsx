@@ -1,5 +1,5 @@
 import React from 'react';
-import { company, flagship } from '@/data/site';
+import { company, flagship, upnow } from '@/data/site';
 import Logo from '@/components/Logo';
 
 const Footer = () => {
@@ -29,6 +29,7 @@ const Footer = () => {
             <p className="eyebrow">Products</p>
             <ul className="mt-4 space-y-2.5 text-sm">
               <li><a href={flagship.url} target="_blank" rel="noopener" className="text-muted-foreground hover:text-foreground">ReadyDM ↗</a></li>
+              <li><a href={upnow.url} target="_blank" rel="noopener" className="text-muted-foreground hover:text-foreground">UpNow ↗</a></li>
               <li><a href="#products" className="text-muted-foreground hover:text-foreground">In the lab</a></li>
             </ul>
           </div>

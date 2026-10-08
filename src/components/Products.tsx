@@ -1,6 +1,6 @@
 import React from 'react';
 import { ArrowUpRight, Check, FlaskConical, Handshake, ShieldBan, Bot, LineChart } from 'lucide-react';
-import { flagship, labProducts } from '@/data/site';
+import { flagship, labProducts, upnow } from '@/data/site';
 
 const capabilityIcons = [Handshake, ShieldBan, Bot, LineChart];
 
@@ -73,13 +73,51 @@ const Products = () => {
           </div>
         </article>
 
+        {/* Live on Google Play */}
+        <article className="mt-6 grid gap-8 rounded-3xl border border-border bg-card p-8 md:p-10 lg:grid-cols-[1fr_1fr] lg:items-center">
+          <div>
+            <div className="flex flex-wrap items-center gap-3">
+              <span className="rounded-full bg-primary/15 px-3 py-1 font-mono text-[11px] font-medium text-primary">
+                Live on Google Play
+              </span>
+              <span className="font-mono text-[11px] text-muted-foreground">{upnow.kind}</span>
+            </div>
+            <div className="mt-8 flex items-center gap-4">
+              <img src={upnow.icon} alt="" className="h-16 w-16 rounded-2xl" width={64} height={64} />
+              <div>
+                <h3 className="font-display text-2xl font-semibold tracking-tight">{upnow.name}</h3>
+                <p className="text-sm text-muted-foreground">{upnow.fullName}</p>
+              </div>
+            </div>
+            <p className="mt-6 font-display text-xl font-semibold leading-snug md:text-2xl">{upnow.headline}</p>
+            <p className="mt-3 leading-relaxed text-muted-foreground">{upnow.description}</p>
+            <a
+              href={upnow.url}
+              target="_blank"
+              rel="noopener"
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-medium text-primary-foreground transition-opacity hover:opacity-90"
+            >
+              Get it on Google Play
+              <ArrowUpRight className="h-4 w-4" />
+            </a>
+          </div>
+          <ul className="grid gap-px overflow-hidden rounded-2xl border border-border bg-border">
+            {upnow.features.map((feature) => (
+              <li key={feature} className="flex items-start gap-3 bg-background p-5 text-sm">
+                <Check className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                {feature}
+              </li>
+            ))}
+          </ul>
+        </article>
+
         {/* In the lab */}
         <div className="mt-16 flex items-center gap-3">
           <FlaskConical className="h-4 w-4 text-primary" />
           <p className="eyebrow">In the lab</p>
         </div>
 
-        <div className="mt-6 grid gap-4 md:grid-cols-3">
+        <div className="mt-6 grid gap-4 md:grid-cols-2">
           {labProducts.map((product) => (
             <article
               key={product.name}
