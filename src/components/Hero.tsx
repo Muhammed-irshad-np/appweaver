@@ -1,57 +1,79 @@
-
 import React from 'react';
-import { Button } from '@/components/ui/button';
-import { ArrowRight, Star } from 'lucide-react';
+import { ArrowRight, BadgeCheck } from 'lucide-react';
+import { company } from '@/data/site';
+import AgentConsole from '@/components/AgentConsole';
+
+const keywords = [
+  'Agentic AI',
+  'Physical AI',
+  'LLM agents',
+  'On-device ML',
+  'Multimodal apps',
+  'AI for creators',
+  'Human-in-the-loop',
+  'Evals-first',
+  'Android · iOS · Web',
+];
 
 const Hero = () => {
-  const scrollToContact = () => {
-    const element = document.getElementById('contact');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
-  };
-
   return (
-    <section className="pt-24 pb-16 bg-gradient-to-br from-blue-50 via-white to-purple-50">
-      <div className="container mx-auto px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="flex justify-center mb-6">
-            <div className="flex items-center space-x-1 bg-yellow-100 text-yellow-800 px-3 py-1 rounded-full text-sm">
-              <Star className="w-4 h-4 fill-current" />
-              <span>AppWeavers - Professional App Development Studio</span>
+    <section id="top" className="relative overflow-hidden pt-28 md:pt-36">
+      <div className="pointer-events-none absolute inset-0 grid-bg" />
+      <div className="pointer-events-none absolute inset-0 glow" />
+
+      <div className="container relative mx-auto px-4">
+        <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-[1.1fr_1fr] lg:gap-16">
+          <div>
+            <a
+              href={company.udyamVerifyUrl}
+              target="_blank"
+              rel="noopener"
+              className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-3 py-1.5 font-mono text-[11px] text-muted-foreground transition-colors hover:text-foreground"
+            >
+              <BadgeCheck className="h-3.5 w-3.5 text-primary" />
+              AI product lab · {company.city} · Udyam MSME
+            </a>
+
+            <h1 className="mt-6 font-display text-5xl font-semibold leading-[1.02] tracking-tight sm:text-6xl lg:text-7xl">
+              We build AI products.
+              <span className="block text-primary">Better ones.</span>
+            </h1>
+
+            <p className="mt-6 max-w-xl text-lg leading-relaxed text-muted-foreground">
+              AppWeavers Labs is a small, AI-first startup that designs, builds and ships its own
+              AI-native apps for mobile and the web. Agentic AI that takes action, physical AI that
+              senses the real world, and AI applications people actually use.
+            </p>
+
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <a
+                href="#products"
+                className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-3 font-medium text-primary-foreground transition-opacity hover:opacity-90"
+              >
+                See our AI products
+                <ArrowRight className="h-4 w-4" />
+              </a>
+              <a
+                href={`mailto:${company.email}`}
+                className="inline-flex items-center justify-center rounded-full border border-border px-6 py-3 font-medium transition-colors hover:bg-accent"
+              >
+                {company.email}
+              </a>
             </div>
           </div>
-          
-          <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            Weaving Amazing
-            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent block">
-              Mobile Apps
+
+          <AgentConsole />
+        </div>
+      </div>
+
+      <div className="relative mt-20 border-y border-border bg-card/40 py-4 overflow-hidden">
+        <div className="flex w-max animate-marquee gap-10 font-mono text-sm text-muted-foreground">
+          {[...keywords, ...keywords].map((k, i) => (
+            <span key={i} className="flex items-center gap-10 whitespace-nowrap">
+              {k}
+              <span className="text-primary">✦</span>
             </span>
-          </h1>
-          
-          <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
-            AppWeavers specializes in creating high-quality mobile applications for Android and iOS platforms. 
-            From concept to app store publication, we deliver exceptional digital experiences.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              size="lg" 
-              onClick={scrollToContact}
-              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-lg px-8 py-4"
-            >
-              Start Your Project
-              <ArrowRight className="w-5 h-5 ml-2" />
-            </Button>
-            <Button 
-              size="lg" 
-              variant="outline"
-              onClick={() => document.getElementById('portfolio')?.scrollIntoView({ behavior: 'smooth' })}
-              className="text-lg px-8 py-4 border-2"
-            >
-              View Our Work
-            </Button>
-          </div>
+          ))}
         </div>
       </div>
     </section>

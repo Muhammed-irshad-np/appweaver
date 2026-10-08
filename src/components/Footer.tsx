@@ -1,77 +1,51 @@
-
 import React from 'react';
-import { Smartphone, Mail, Phone, MapPin } from 'lucide-react';
+import { company, flagship } from '@/data/site';
+import Logo from '@/components/Logo';
 
 const Footer = () => {
   return (
-    <footer className="bg-gray-900 text-white py-16">
+    <footer className="border-t border-border pb-28 pt-14 md:pb-12">
       <div className="container mx-auto px-4">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-            <div className="col-span-1 md:col-span-2">
-              <div className="flex items-center space-x-2 mb-6">
-                <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
-                  <Smartphone className="w-6 h-6 text-white" />
-                </div>
-                <span className="text-2xl font-bold">AppWeavers</span>
-              </div>
-              <p className="text-gray-400 mb-6 leading-relaxed max-w-md">
-                Professional mobile app development studio specializing in creating innovative, 
-                high-quality applications for Android and iOS platforms.
-              </p>
-              <div className="space-y-3">
-                <div className="flex items-center space-x-3 text-gray-400">
-                  <Mail className="w-5 h-5" />
-                  <span>appweaverlabs@gmail.com</span>
-                </div>
-                <div className="flex items-center space-x-3 text-gray-400">
-                  <Phone className="w-5 h-5" />
-                  <span>+91 7034714132</span>
-                </div>
-                <div className="flex items-center space-x-3 text-gray-400">
-                  <MapPin className="w-5 h-5" />
-                  <span>Shantipuram 90, NGO Quarters, Kakkanad, Ernakulam, Kerala 682021</span>
-                </div>
-              </div>
+        <div className="grid gap-10 md:grid-cols-[2fr_1fr_1fr]">
+          <div>
+            <div className="flex items-center gap-2.5">
+              <Logo />
+              <span className="font-display text-lg font-semibold">{company.lab}</span>
             </div>
-            
-            <div>
-              <h3 className="text-lg font-semibold mb-6">Services</h3>
-              <ul className="space-y-3 text-gray-400">
-                <li><a href="#services" className="hover:text-white transition-colors">Mobile App Development</a></li>
-                <li><a href="#services" className="hover:text-white transition-colors">iOS Development</a></li>
-                <li><a href="#services" className="hover:text-white transition-colors">Android Development</a></li>
-                <li><a href="#services" className="hover:text-white transition-colors">App Store Publishing</a></li>
-                <li><a href="#services" className="hover:text-white transition-colors">App Maintenance</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h3 className="text-lg font-semibold mb-6">Company</h3>
-              <ul className="space-y-3 text-gray-400">
-                <li><a href="#about" className="hover:text-white transition-colors">About Us</a></li>
-                <li><a href="#portfolio" className="hover:text-white transition-colors">Portfolio</a></li>
-                <li><a href="#contact" className="hover:text-white transition-colors">Contact</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Privacy Policy</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Terms of Service</a></li>
-              </ul>
-            </div>
+            <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
+              An AI product lab building agentic AI, physical AI and AI-native apps for mobile and the web.
+            </p>
+            <a
+              href={company.udyamVerifyUrl}
+              target="_blank"
+              rel="noopener"
+              className="mt-6 inline-block rounded-lg border border-border px-3 py-2 font-mono text-xs text-muted-foreground transition-colors hover:text-foreground"
+            >
+              Udyam Registration No. <span className="text-foreground">{company.udyam}</span>
+            </a>
           </div>
-          
-          <div className="border-t border-gray-800 pt-8">
-            <div className="flex flex-col md:flex-row justify-between items-center">
-              <p className="text-gray-400 text-sm mb-4 md:mb-0">
-                © 2024 AppWeavers. All rights reserved. Professional Mobile App Development Services.
-              </p>
-              <div className="flex space-x-6 text-sm text-gray-400">
-                <span>Registered Business Entity</span>
-                <span>•</span>
-                <span>Google Play Console Developer</span>
-                <span>•</span>
-                <span>Apple Developer Program Member</span>
-              </div>
-            </div>
+
+          <div>
+            <p className="eyebrow">Products</p>
+            <ul className="mt-4 space-y-2.5 text-sm">
+              <li><a href={flagship.url} target="_blank" rel="noopener" className="text-muted-foreground hover:text-foreground">ReadyDM ↗</a></li>
+              <li><a href="#products" className="text-muted-foreground hover:text-foreground">In the lab</a></li>
+            </ul>
           </div>
+
+          <div>
+            <p className="eyebrow">Company</p>
+            <ul className="mt-4 space-y-2.5 text-sm">
+              <li><a href="#lab" className="text-muted-foreground hover:text-foreground">The lab</a></li>
+              <li><a href="#recognition" className="text-muted-foreground hover:text-foreground">Recognition</a></li>
+              <li><a href={`mailto:${company.email}`} className="text-muted-foreground hover:text-foreground">{company.email}</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div className="mt-12 flex flex-col gap-2 border-t border-border pt-6 text-xs text-muted-foreground md:flex-row md:justify-between">
+          <p>© {new Date().getFullYear()} {company.name}. All rights reserved.</p>
+          <p>Made in {company.city}</p>
         </div>
       </div>
     </footer>
